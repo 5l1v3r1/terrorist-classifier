@@ -20,7 +20,7 @@ def import_data(variable_list=None):
     print('Reading data...')
     with warnings.catch_warnings(): #ignore DtypeWarning
         warnings.simplefilter('ignore')
-        df_full = pd.read_csv('/Users/richard/Documents/Fellowship.ai/GTD_0617dist/globalterrorismdb_0617dist.csv')
+        df_full = pd.read_csv('/Users/richard/Documents/Fellowship.ai/globalterrorismdb_0617dist.csv')
     if variable_list:
         cols = pd.read_csv(variable_list)
     #select provided features
@@ -110,7 +110,7 @@ def classify(group_thres=5, cate_thres=100, train_index=None, test_index=None,
     
     if df is None:
         df = import_data(variable_list = 
-                         '/Users/richard/Documents/Fellowship.ai/variables LONGER.txt')
+                         '/Users/richard/Documents/Fellowship.ai/features.txt')
     
     #split train and test sets
     dfx = df.drop('gname', axis=1)
@@ -183,6 +183,3 @@ def cross_validate(group_thres=5, cate_thres=100, k=4):
         scores.loc['std'] = [np.std(m) for m in list(zip(*metrics))[:-1]]
     print(scores)
     return(scores)
-
-#classify(100,100)
-scores = cross_validate(500,500)

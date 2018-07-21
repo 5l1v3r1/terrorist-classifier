@@ -24,3 +24,6 @@ import classifier
 classifier.classify(group_thres=5, cate_thres=100)
 ```
 The two variables passed into the classifier are hyperparameters for the model, which dictate the size of the training set. group_thres indicates the minimum number of attacks for a terrorist group to be included in the training set. cate_thres sets the threshold of feature instances below which a value will be aggregated. 
+
+# Notebook
+The classifier is fully documented in the Jupyter notebook [here](Terrorist Classifier.ipynb), which includes data filtering methodology, hyperparameter selection, and cross-validation results.

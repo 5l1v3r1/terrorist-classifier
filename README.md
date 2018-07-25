@@ -14,7 +14,7 @@ classifier.classify(group_thres=5, cate_thres=100)
 ```
 You can also perform k-fold cross-validation on the model:
 ```python
-classifier.crossvalidate(group_thres=5, cate_thres=100, k=4)
+classifier.cross_validate(group_thres=5, cate_thres=100, k=4)
 ```
 The two variables passed into the classifier are hyperparameters, which determine the level of detail retained in the training set. `group_thres` indicates the minimum number of attacks for a terrorist group to be included in the training set. `cate_thres` sets the threshold of feature instances below which a value will be aggregated.
 

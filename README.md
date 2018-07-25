@@ -4,6 +4,8 @@ The goal of this classifier is to predict the terrorist group responsible for an
 # Data Source
 Terrorist attack data from 1970-2017 were collected from the Global Terrorism Database (GTD), available for download here: https://www.start.umd.edu/gtd/contact/.
 
+The Excel spreadsheet was converted to a .csv file to expedite handling with pandas (see [notebook](Terrorist%20Classifier.ipynb)).
+
 # Running classifier
 We chose to implement an MLP neural network to model this supervised classification problem, as we do not have prior knowledge of each feature's statistical power.
 
